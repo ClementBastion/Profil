@@ -14,9 +14,10 @@
       <link rel="icon" type="image/png" href="favicon.png" />
       <script src="https://kit.fontawesome.com/807cb20c27.js" crossorigin="anonymous"></script>
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <link rel="stylesheet" href="print.css" type="text/css" media="print" />
    </head>
    <body>
-      <header style="margin-bottom: 100px;">
+      <header class="not_print" style="margin-bottom: 100px;">
          <nav class="navbar navbar-expand-md navbar-dark fixed-top" id="navbar" style="position: fixed;background-color: black;">
             <a class="navbar-brand" href="index.html">
                <img src="logo.png" width="70" height="70" alt="Accueil">
@@ -1039,6 +1040,8 @@
                         <h2 class="h1 mt-2 aos-init aos-animate" data-aos="fade-left" data-aos-delay="0">Clément Bastion</h2>
                         <p data-aos="fade-left" data-aos-delay="100" class="aos-init aos-animate">Développeur d'applications junior</p>
                         <div class="d-print-none aos-init aos-animate" data-aos="fade-left" data-aos-delay="200"><a class="btn btn-light text-dark shadow-sm mt-1 me-1" href="https://clementbastion.github.io/Profil/CvDevBastion.html" download target="_blank">Telecharger le CV</a></div>
+                        <div class="d-print-none aos-init aos-animate" data-aos="fade-left" data-aos-delay="250"><span class="btn btn-light text-dark shadow-sm mt-1 me-1" onclick="window.print()">Imprimer le CV</span></div>
+
                      </div>
 
 
@@ -1089,7 +1092,7 @@
                </div>
             </div>
             <hr class="d-print-none">
-            <div class="skills-section px-3 px-lg-4">
+            <div class="skills-section px-3 px-lg-4 not_print">
                <h2 class="h3 mb-3">Compétences</h2>
                <div class="row">
                   <div class="col-md-6">
@@ -1236,7 +1239,7 @@
          </div>
       </div>
       </div>
-      <footer style="background-color: rgb(17, 17, 17);">
+      <footer class="not_print" style="background-color: rgb(17, 17, 17);">
         <div class="" style="justify-content: space-around;align-items: center;display: flex;">
             <span>
                 <a href="contact.html">Contact</a>
@@ -1277,7 +1280,8 @@
       },
       button: {
         backgroundColor: "gray"
-      }
+      },
+    
     }
   });
 </script>
