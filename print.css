@@ -1,3 +1,6 @@
 .not_print{
     display : none;
   }
+.change_color_on_print{
+    fill: #000!important;
+}
