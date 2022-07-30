@@ -1042,8 +1042,13 @@
                      <div class="text-center">
                         <h2 class="h1 mt-2 aos-init aos-animate" data-aos="fade-left" data-aos-delay="0">Clément Bastion</h2>
                         <p data-aos="fade-left" data-aos-delay="100" class="aos-init aos-animate">Concepteur Développeur d'Applications DevOps</p>
-                        <div class="d-print-none aos-init aos-animate" data-aos="fade-left" data-aos-delay="200"><a class="btn btn-light text-dark shadow-sm mt-1 me-1" href="https://clementbastion.github.io/Profil/CvDevBastion.html" download target="_blank">Telecharger le CV</a></div>
-                        <div class="d-print-none aos-init aos-animate" data-aos="fade-left" data-aos-delay="250"><span class="btn btn-light text-dark shadow-sm mt-1 me-1" onclick="window.print()">Imprimer le CV</span></div>
+                        <div class="d-print-none aos-init aos-animate" data-aos="fade-left" data-aos-delay="200">
+                           <a class="btn btn-light text-dark shadow-sm mt-1 me-1" href="https://clementbastion.github.io/Profil/CvDevBastion.html" download target="_blank">Telecharger le CV (Html)</a>
+                        </div>
+                        <div class="d-print-none aos-init aos-animate" data-aos="fade-left" data-aos-delay="250">
+                           <!--<span class="btn btn-light text-dark shadow-sm mt-1 me-1" onclick="printJS('./')">Imprimer le CV</span>-->
+                           <a class="btn btn-light text-dark shadow-sm mt-1 me-1" href="https://clementbastion.github.io/Profil/Bastion CV CDA DevOps.pdf" download target="_blank">Telecharger le CV (Pdf)</a>
+                        </div>
 
                      </div>
                </div>
@@ -1119,6 +1124,12 @@
                            <div class="progress-bar bg-success aos-init" role="progressbar" data-aos="zoom-in-right" data-aos-delay="650" data-aos-anchor=".skills-section" style="width: 60%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                      </div>
+                     <div class="mb-2">
+                        <span>NodeJS</span>
+                        <div class="progress my-1">
+                           <div class="progress-bar bg-success aos-init" role="progressbar" data-aos="zoom-in-right" data-aos-delay="550" data-aos-anchor=".skills-section" style="width: 50%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                     </div>
                   </div>
                   <div class="col-md-6">
                      <div class="mb-2">
@@ -1137,6 +1148,12 @@
                         <span>CSS 3</span>
                         <div class="progress my-1">
                            <div class="progress-bar bg-primary aos-init" role="progressbar" data-aos="zoom-in-right" data-aos-delay="600" data-aos-anchor=".skills-section" style="width: 85%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                     </div>
+                     <div class="mb-2">
+                        <span>Angular</span>
+                        <div class="progress my-1">
+                           <div class="progress-bar bg-primary aos-init" role="progressbar" data-aos="zoom-in-right" data-aos-delay="500" data-aos-anchor=".skills-section" style="width: 50%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                      </div>
                   </div>
@@ -1251,6 +1268,16 @@
     <!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
 <script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
 <script>
+   function PrintPdf (pdf) {
+        var iframe = document.createElement('iframe');
+        iframe.style.display = "none";
+        iframe.src = pdf;
+        document.body.appendChild(iframe);
+        iframe.contentWindow.focus();
+        iframe.contentWindow.print();
+}
+</script>
+<script>
   /* paste this line in verbatim */
   window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
   /* customize formbutton below*/     
@@ -1289,6 +1316,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
       <script src="js.js" ></script>
+      <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+      <script src="https://printjs-4de6.kxcdn.com/print.min.css"></script>
       <script>
          AOS.init();
       </script>
